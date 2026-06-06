@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class Starterscript : MonoBehaviour
 {
-    [serializeField] int myNumber;
-    [serializeField] string myName;
-    [serializeField] bool myChoice;
+    [SerializeField] int myNumber;
+    [SerializeField] string myName;
+    [SerializeField] bool myChoice;
     int myOtherNumber;
-    [serializeField] GameObject myGate;
+    [SerializeField] GameObject myGate;
 
     
     void Start()
@@ -14,7 +14,7 @@ public class Starterscript : MonoBehaviour
         myNumber = 4;
         myName = "jimmy";
         myOtherNumber = myNumber;
-        myGate.setActive(true);
+        myGate.SetActive(true);
     }
 
     void Update()
