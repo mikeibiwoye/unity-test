@@ -20,7 +20,7 @@ public class Starterscript : MonoBehaviour
 
     void Update()
     {
-                if (myNumber == 4)
+                if (myNumber == 4 && myChoice == true)
         {
             myName = "Michael";
             myGate.SetActive(true);
