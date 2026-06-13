@@ -11,14 +11,24 @@ public class Starterscript : MonoBehaviour
     
     void Start()
     {
-        myNumber = 4;
-        myName = "jimmy";
+        myNumber = 3;
         myOtherNumber = myNumber;
-        myGate.SetActive(true);
+        
+
     }
+
 
     void Update()
     {
-        
+                if (myNumber == 4)
+        {
+            myName = "Michael";
+            myGate.SetActive(true);
+        }
+        else
+        {
+            myName = "Matthew";
+            myGate.SetActive(false);
+        }
     }
 }
