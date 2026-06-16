@@ -13,7 +13,7 @@ public class Starterscript : MonoBehaviour
     void Start()
     {
         myNumber = 3;
-        myOtherNumber = myNumber;
+        myChoice = true;
         
 
     }
@@ -21,16 +21,25 @@ public class Starterscript : MonoBehaviour
 
     void Update()
     {
-                if (myNumber == 4 && myChoice == true)
+        if (myNumber == 4 && myChoice == true)
         {
             myName = "Michael";
             myGate.SetActive(true);
-            Name1.GetComponent<TMPro.TMP_Text>().text = "" + myNumber;
+            Name1.GetComponent<TMPro.TMP_Text>().text = "My Number; " + myNumber + " My Name: " + myName;
+            Name2.GetComponent<TMPro.TMP_Text>().text = "________________";
         }
         else
         {
             myName = "Matthew";
             myGate.SetActive(false);
+            Name2.GetComponent<TMPro.TMP_Text>().text = "Matthew is active";
+            Name1.GetComponent<TMPro.TMP_Text>().text = "Michael is inactive";
+        }
+
+        if(myNumber == 0)
+        {
+            Name1.GetComponent<TMPro.TMP_Text>().text = "";
+            Name2.GetComponent<TMPro.TMP_Text>().text = "";
         }
     }
 }
