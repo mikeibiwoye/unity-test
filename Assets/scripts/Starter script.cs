@@ -7,7 +7,8 @@ public class Starterscript : MonoBehaviour
     [SerializeField] bool myChoice;
     int myOtherNumber;
     [SerializeField] GameObject myGate;
-
+    [SerializeField] GameObject Name1;
+    [SerializeField] GameObject Name2;
     
     void Start()
     {
@@ -24,6 +25,7 @@ public class Starterscript : MonoBehaviour
         {
             myName = "Michael";
             myGate.SetActive(true);
+            Name1.GetComponent<TextMeshPro>().text = "" + myNumber;
         }
         else
         {
