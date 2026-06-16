@@ -25,7 +25,7 @@ public class Starterscript : MonoBehaviour
         {
             myName = "Michael";
             myGate.SetActive(true);
-            Name1.GetComponent<TextMeshPro>().text = "" + myNumber;
+            Name1.GetComponent<TMPro.TMP_Text>().text = "" + myNumber;
         }
         else
         {
