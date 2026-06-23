@@ -24,14 +24,14 @@ public class Starterscript : MonoBehaviour
         if (myNumber == 4 && myChoice == true)
         {
             myName = "Michael";
-            myGate.SetActive(true);
+            //myGate.SetActive(true);
             Name1.GetComponent<TMPro.TMP_Text>().text = "My Number; " + myNumber + " My Name: " + myName;
             Name2.GetComponent<TMPro.TMP_Text>().text = "________________";
         }
         else
         {
             myName = "Matthew";
-            myGate.SetActive(false);
+            //myGate.SetActive(false);
             Name2.GetComponent<TMPro.TMP_Text>().text = "Matthew is active";
             Name1.GetComponent<TMPro.TMP_Text>().text = "Michael is inactive";
         }
@@ -41,5 +41,10 @@ public class Starterscript : MonoBehaviour
             Name1.GetComponent<TMPro.TMP_Text>().text = "";
             Name2.GetComponent<TMPro.TMP_Text>().text = "";
         }
+    }
+
+    public void OpenGate()
+    {
+        myGate.GetComponent<Animator>().Play("Gateswing");
     }
 }
