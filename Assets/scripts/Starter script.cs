@@ -39,6 +39,6 @@ public class Starterscript : MonoBehaviour
 
     public void OpenGate()
     {
-        myGate.GetComponent<Animator>().Play("Gateswing");
+        myGate.GetComponent<Animator>().Play("Gate swing");
     }
 }
