@@ -35,12 +35,6 @@ public class Starterscript : MonoBehaviour
             Name2.GetComponent<TMPro.TMP_Text>().text = "Matthew is active";
             Name1.GetComponent<TMPro.TMP_Text>().text = "Michael is inactive";
         }
-
-        if(myNumber == 0)
-        {
-            Name1.GetComponent<TMPro.TMP_Text>().text = "";
-            Name2.GetComponent<TMPro.TMP_Text>().text = "";
-        }
     }
 
     public void OpenGate()
