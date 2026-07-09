@@ -9,12 +9,21 @@ public class Starterscript : MonoBehaviour
     [SerializeField] GameObject myGate;
     [SerializeField] GameObject Name1;
     [SerializeField] GameObject Name2;
-    
+    [SerializeField] GameObject firstButton;
+
+
+    [SerializeField] GameObject fadeIn;
+    [SerializeField] GameObject fadeOut;
+    [SerializeField] GameObject hiddenSphere;
+
+
+
+
     void Start()
     {
         myNumber = 3;
         myChoice = true;
-        
+        StartCoroutine(MySequence());
 
     }
 
@@ -40,5 +49,23 @@ public class Starterscript : MonoBehaviour
     public void OpenGate()
     {
         myGate.GetComponent<Animator>().Play("Gate swing");
+    }
+
+    public void HideButton()
+    {
+        firstButton.SetActive(false);
+    }
+
+    IEnumerator MySequence()
+    {
+        yield return new WaitForSeconds(0.5f);
+        fadeIn.SetActive(false);
+        myGate.GetComponent<Animator>().Play("Gate swing");
+        yield return new WaitForSeconds(4f);
+        firstButton.SetActive(false);
+        yield return new WaitForSeconds(2f);
+        hiddenSphere.SetActive(true);
+        yield return new WiatForSeconds(2f);
+        fadeOut.SetActive(true);
     }
 }
