@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Starterscript : MonoBehaviour
@@ -59,7 +60,7 @@ public class Starterscript : MonoBehaviour
     IEnumerator MySequence()
     {
         yield return new WaitForSeconds(0.5f);
-        fadeIn.SetActive(true);
+        fadeIn.SetActive(false);
         myGate.GetComponent<Animator>().Play("Gate swing");
         yield return new WaitForSeconds(4f);
         firstButton.SetActive(false);
