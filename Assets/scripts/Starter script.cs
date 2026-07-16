@@ -16,7 +16,7 @@ public class Starterscript : MonoBehaviour
     [SerializeField] GameObject fadeIn;
     [SerializeField] GameObject fadeOut;
     [SerializeField] GameObject hiddenSphere;
-
+    [SerializeField] AudioSource ding;
 
 
 
@@ -54,7 +54,8 @@ public class Starterscript : MonoBehaviour
 
     public void HideButton()
     {
-        firstButton.SetActive(false);
+        //firstButton.SetActive(false);
+        ding.Play();
     }
 
     IEnumerator MySequence()
