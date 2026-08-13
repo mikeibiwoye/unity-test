@@ -16,7 +16,7 @@ public class OpenChest : MonoBehaviour
             {
                 chestOpen = true;
                 GameObject targetChest = chest != null ? chest : gameObject;
-                targetChest.GetComponent<Animator>().Play("Open chest");
+                targetChest.GetComponent<Animator>().Play("OpenChest");
             }
         }
     }
