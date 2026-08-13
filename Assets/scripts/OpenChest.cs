@@ -1,25 +1,28 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class OpenChest : MonoBehaviour
 {
-    [SerializeField] float internalDistance;
     [SerializeField] bool chestOpen;
     [SerializeField] GameObject chest;
-    [SerializeField] float openDistance = 2f;
 
     void Update()
     {
-        internalDistance = RayCasting.distanceFromTarget;
-        if (chestOpen == false && internalDistance > 0 && internalDistance < openDistance)
+        if (chestOpen == false && Keyboard.current != null && Keyboard.current.eKey.wasPressedThisFrame)
         {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                chestOpen = true;
-                GameObject targetChest = chest != null ? chest : gameObject;
-                targetChest.GetComponent<Animator>().Play("OpenChest");
-            }
+            Open();
         }
     }
 
+    void Open()
+    {
+        chestOpen = true;
+        GameObject targetChest = chest != null ? chest : gameObject;
+        Animator animator = targetChest.GetComponent<Animator>();
 
+        if (animator != null)
+        {
+            animator.Play("OpenChest");
+        }
+    }
 }

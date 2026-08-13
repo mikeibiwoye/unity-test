@@ -35,15 +35,29 @@ public class Starterscript : MonoBehaviour
         {
             myName = "Michael";
             //myGate.SetActive(true);
-            Name1.GetComponent<TMPro.TMP_Text>().text = "My Number; " + myNumber + " My Name: " + myName;
-            Name2.GetComponent<TMPro.TMP_Text>().text = "________________";
+            if (Name1 != null)
+            {
+                Name1.GetComponent<TMPro.TMP_Text>().text = "My Number; " + myNumber + " My Name: " + myName;
+            }
+
+            if (Name2 != null)
+            {
+                Name2.GetComponent<TMPro.TMP_Text>().text = "________________";
+            }
         }
         else
         {
             myName = "Matthew";
             //myGate.SetActive(false);
-            Name2.GetComponent<TMPro.TMP_Text>().text = "Matthew is active";
-            Name1.GetComponent<TMPro.TMP_Text>().text = "Michael is inactive";
+            if (Name2 != null)
+            {
+                Name2.GetComponent<TMPro.TMP_Text>().text = "Matthew is active";
+            }
+
+            if (Name1 != null)
+            {
+                Name1.GetComponent<TMPro.TMP_Text>().text = "Michael is inactive";
+            }
         }
     }
 
