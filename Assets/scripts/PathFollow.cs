@@ -76,7 +76,7 @@ public class PathFollow : MonoBehaviour
     void Update()
     {
         transform.LookAt(destination.transform);
-        transform.position = Vector3.MoveTowards(transform.position, destination.transform.position, 0.01f);
+        transform.position = Vector3.MoveTowards(transform.position, destination.transform.position, 0.05f);
         if (resetMove == false)
         {
             resetMove = true;
@@ -89,7 +89,7 @@ public class PathFollow : MonoBehaviour
     {
         if (position == 1)
         {
-            yield return new WaitForSeconds(5);
+            yield return new WaitForSeconds(6);
             xPos = 23;
             zPos = 24;
             destination.transform.position = new Vector3(xPos, 2, zPos);
@@ -98,7 +98,7 @@ public class PathFollow : MonoBehaviour
         }
         if (position == 2)
         {
-            yield return new WaitForSeconds(5);
+            yield return new WaitForSeconds(6);
             xPos = 27;
             zPos = 6;
             destination.transform.position = new Vector3(xPos, 2, zPos);
@@ -107,7 +107,7 @@ public class PathFollow : MonoBehaviour
         }
         if (position == 3)
         {
-            yield return new WaitForSeconds(5);
+            yield return new WaitForSeconds(6);
             xPos = 14;
             zPos = 5;
             destination.transform.position = new Vector3(xPos, 2, zPos);
