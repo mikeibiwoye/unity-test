@@ -67,7 +67,7 @@ public class PathFollow : MonoBehaviour
     void Start()
     {
         resetMove = true;
-        destination.transform.position = new Vector3(xPos, 1, zPos);
+        destination.transform.position = new Vector3(xPos, 2, zPos);
         position += 1;
         StartCoroutine(NextDestination());
     }
@@ -76,7 +76,7 @@ public class PathFollow : MonoBehaviour
     void Update()
     {
         transform.LookAt(destination.transform);
-        transform.position = Vector3.MoveTowards(transform.position, destination.transform.position, 0.05f);
+        transform.position = Vector3.MoveTowards(transform.position, destination.transform.position, 0.02f);
         if (resetMove == false)
         {
             resetMove = true;
